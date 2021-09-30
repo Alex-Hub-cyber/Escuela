@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Escuela.Dominio;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,21 @@ namespace Escuela.Data
 
 
         }
+        public DbSet<Student> students { get; set; }
+
+        
+        public DbSet<Erollement> erollements { get; set; }
+
+
+        public DbSet<Course> courses { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
+
+
     }
 }
 

@@ -6384,11 +6384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Pictures\\PROGRAMACIÓN II\\Escuela\\Escuela\\Escuela.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Documents\\GitHub\\Escuela\\Escuela\\Escuela\\Escuela.csproj",
       "projectName": "Escuela",
-      "projectPath": "C:\\Users\\user\\Pictures\\PROGRAMACIÓN II\\Escuela\\Escuela\\Escuela.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\Documents\\GitHub\\Escuela\\Escuela\\Escuela\\Escuela.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Pictures\\PROGRAMACIÓN II\\Escuela\\Escuela\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Documents\\GitHub\\Escuela\\Escuela\\Escuela\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
