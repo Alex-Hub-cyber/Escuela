@@ -34,12 +34,7 @@ namespace Escuela.Controllers
 
         public IActionResult NuevaVista()
         {
-            Course course = new Course();
-
-
-            course.Title = "Hola";
-            course.Credits = 3;
-            iCourse.Insertar(course);
+          
             return View();
         }
 
