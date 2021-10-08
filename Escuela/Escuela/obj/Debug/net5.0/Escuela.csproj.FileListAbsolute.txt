@@ -385,3 +385,4 @@ C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\
 C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\ref\Escuela.dll
 C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\Escuela.pdb
 C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\Escuela.genruntimeconfig.cache
+C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\NuevaVista.cshtml.g.cs

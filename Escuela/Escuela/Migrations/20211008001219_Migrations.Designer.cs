@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Escuela.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210930170319_Migrations")]
+    [Migration("20211008001219_Migrations")]
     partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,6 +73,9 @@ namespace Escuela.Migrations
 
                     b.Property<DateTime>("ErollementsDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("FirstMidName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");

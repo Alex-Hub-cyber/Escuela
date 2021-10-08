@@ -1,4 +1,6 @@
 using Escuela.Data;
+using Escuela.Repositorio;
+using Escuela.Servicios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +26,8 @@ namespace Escuela
             services.AddDbContext<ApplicationDbContext>(Options =>
                 Options.UseSqlServer(Configuration.GetConnectionString
                 ("DefaultConnection")));
+
+            services.AddTransient<ICourse, CourseRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

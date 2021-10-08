@@ -28,6 +28,7 @@ namespace Escuela.Migrations
                     StudentId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FirstMidName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ErollementsDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

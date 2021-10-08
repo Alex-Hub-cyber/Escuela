@@ -16,6 +16,8 @@ namespace Escuela.Dominio
 
         public string LastName { get; set; }
 
+        public string FirstMidName { get; set; }
+
 
         public DateTime ErollementsDate { get; set; }
 

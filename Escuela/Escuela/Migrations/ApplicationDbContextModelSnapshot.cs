@@ -72,6 +72,9 @@ namespace Escuela.Migrations
                     b.Property<DateTime>("ErollementsDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("FirstMidName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
