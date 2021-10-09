@@ -16,14 +16,30 @@ namespace Escuela.Repositorio
 
             this.app = app;
         }
-        public void Insertar ( Course c)
-        {// app.add(c); llama a la clase de Servicio
-            app.Add(c);
 
-            //app.SaveChanges(); Guarda los datos en base de datos 
-            app.SaveChanges();
+        public void Buscar(Course c)
+        {
+            app.courses.Find(c);
+        }
+
+        public void Delete(Course c)
+        {
+            app.courses.Remove(c);
+        }
+
+            public void Insertar(Course c)
+            {// app.add(c); llama a la clase de Servicio
+                app.Add(c);
+
+                //app.SaveChanges(); Guarda los datos en base de datos 
+                app.SaveChanges();
 
 
+            }
+
+            public List<Course> ListarCourses()
+            {
+            return app.courses.ToList();
+        }
         }
     }
-}

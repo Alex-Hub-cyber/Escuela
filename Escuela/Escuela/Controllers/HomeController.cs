@@ -35,17 +35,17 @@ namespace Escuela.Controllers
 
         public IActionResult NuevaVista()
         {
-            var DandoFormatoJson = iCourse.ListarCourses();
-            return Json(new { Data = DandoFormatoJson });
 
-           
+            return View();
         }
 
 
 
         public IActionResult GetAll()
         {// se envia del backen al frontend
-            return View();
+            var DandoFormatoJson = iCourse.ListarCourses();
+            return Json(new { Data = DandoFormatoJson });
+          
         }
         public IActionResult Privacy()
         {
