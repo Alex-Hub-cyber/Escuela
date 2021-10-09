@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Escuela.Servicios
 {
-        public  interface ICourse
+    public interface ICourse
     {
-         public void Insertar(Course c);
+        public void Insertar(Course c);
 
-
+        void Delete(Course c);
+     
         
+        void Buscar(Course c);
+
+
+        //metodo definido
+        List<Course> ListarCourses();
     }
 }

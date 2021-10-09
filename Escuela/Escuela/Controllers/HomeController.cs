@@ -24,6 +24,7 @@ namespace Escuela.Controllers
 
         public IActionResult Index()
         {
+            
             Course course = new Course();
             course.Title = "Poo";
             course.Credits = 100;
@@ -34,10 +35,18 @@ namespace Escuela.Controllers
 
         public IActionResult NuevaVista()
         {
-          
-            return View();
+            var DandoFormatoJson = iCourse.ListarCourses();
+            return Json(new { Data = DandoFormatoJson });
+
+           
         }
 
+
+
+        public IActionResult GetAll()
+        {// se envia del backen al frontend
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
