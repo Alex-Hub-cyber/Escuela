@@ -24,14 +24,16 @@ namespace Escuela.Controllers
 
         public IActionResult Index()
         {
+            for (int i = 0; i < 100; i++)
+            {
+                Course course = new Course();
+                course.Title = "Poo";
+                course.Credits = 100;
+                iCourse.Insertar(course);
+            }
+                return View();
             
-            Course course = new Course();
-            course.Title = "Poo";
-            course.Credits = 100;
-            iCourse.Insertar(course);
-            return View();
         }
-
 
         public IActionResult NuevaVista()
         {

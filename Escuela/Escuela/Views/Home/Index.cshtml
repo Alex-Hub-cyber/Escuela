@@ -7,49 +7,60 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<table id="mitabla" class="table table-dark table-hover>
+<table id="mitabla" >
 
-    <thead>
+        <thead>
 
+                <tr>
+                    <th>
+                        Course ID
+                    </th>
 
-   
+                    <th>
 
-            <tr>
-                <th>
-                    Course ID
-                </th>
+                        Title
+                    </th>
+                    <th>
+                        Credits
+                    </th>
+                </tr>
 
-                <th>
+        </thead>
 
-                    Title
-                </th>
-                <th>
-                    Credits
-                </th>
-            </tr>
-        
-
-
-    </thead>
+    </table>
 
 
 
-</table>
-@section script{
+@section scripts{
+    
 <script src="  https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js">
 
-    
+
 </script>
 
-    <script>
-        $(document).ready(Function()){
+<script>
+    $(document).ready(function () {
 
 
 
-            var tabla = $('mitabla').DataTable
-        }
+        var tabla = $('#mitabla').DataTable({
 
-      
-    </script>
 
-} 
+            "ajax": {
+                "url": '/Home/GetAll',
+                "type": "get",
+                "datatype": "Json"
+            },
+            //columns es de jquery
+            "columns": [
+                { "data": " CourseId", "name": " CourseId", "autowidth": true },
+                { "data": "Title", "name": "Title", "autowidth": true },
+                { "data": "Credits", "name": "Credits", "autowidth": true },
+
+            ]
+        })
+    })
+
+</script>*-->@
+
+    }
