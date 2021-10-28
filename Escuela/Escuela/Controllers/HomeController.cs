@@ -74,7 +74,22 @@ namespace Escuela.Controllers
             _ = Listado;
             return View(Listado);
         }
+        public IActionResult GetAllForJoinJsonLinq()
+        {
+            var Listado = irollement.UnionDeTablas();
 
+            var CombinacionDeArreglos = (from union in Listado
+                                         select new
+                                         {
+                                             union.Course.Title,
+                                             union.Student.LastName,
+                                             union.Student.FirstMidName,
+                                             union.Grade
+                                         }).ToList();
+            return Json(new { CombinacionDeArreglos });
+
+          
+        }
         public IActionResult GetAll()
         {// se envia del backen al frontend
             var DandoFormatoJson = iCourse.ListarCourses();
