@@ -24,7 +24,7 @@ namespace Escuela.Repositorio
 
         public List<Erollement>UnionDeTablas()
         {
-            var Union = db.erollements.Include(e => e.Student).ToList();
+            var Union = db.erollements.Include(e => e.Student).Include(c => c.Course).ToList();
 
             return Union;
         }

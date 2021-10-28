@@ -1,0 +1,3 @@
+﻿@model Escuela.Dominio.Course
+
+@Html.DropDownListFor(a=>a.CourseId,new SelectList(ViewBag.estado,"Value","Text"),"Selecciona un curso",new {clas="form-control"})
