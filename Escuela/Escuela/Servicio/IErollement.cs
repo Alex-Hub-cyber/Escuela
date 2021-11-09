@@ -9,6 +9,8 @@ namespace Escuela.Servicio
   public interface IErollement
     {
           List<Erollement> UnionDeTablas();
-        
+
+        public void Insertar(Erollement erollement);
+
     }
 }

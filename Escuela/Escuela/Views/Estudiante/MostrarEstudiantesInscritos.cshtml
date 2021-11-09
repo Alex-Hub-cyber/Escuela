@@ -1,0 +1,46 @@
+﻿@model List<Escuela.Dominio.Student>
+@{
+    ViewData["Title"] = "MostrarEstudiantesInscritos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="color:blueviolet">MostrarEstudiantesInscritos</h1>
+<br />
+@Html.ActionLink("GuardarDatos", "Insertar", new { StudentId = 0 }, new { @class = "btn btn-danger" })
+
+<table class="table table-striped">
+    <thead>
+ 
+    <th>
+        LastName
+    </th>
+    <th>
+        FirstMidName
+    </th>
+    <th>
+        ErollementsDate
+    </th>
+
+    </thead>
+    <tbody>
+
+        @foreach (var iteracion in Model)
+        {
+            <tr>
+              
+                <td>@iteracion.LastName</td>
+                <td>@iteracion.FirstMidName</td>
+                <td>@iteracion.ErollementsDate</td>
+
+
+                <td>
+                    @Html.ActionLink("Update", "Insertar", new {  LastName = iteracion.LastName, FirstMidName = iteracion.FirstMidName, ErollementsDate = iteracion.ErollementsDate }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Delete", "MostrarEstudiantesInscritos", new { StudentId = iteracion.StudentId }, new { @class = "btn btn-danger" })
+
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

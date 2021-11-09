@@ -1,0 +1,57 @@
+﻿@model List<Escuela.Dominio.Erollement>
+@{
+    ViewData["Title"] = "UnionTabla";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style=" color: cadetblue ">UnionTabla</h1>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+@Html.ActionLink("Agregar Un Nuevo ", "Combobox", new { EnrollemtsId = 0 }, new { @class = "btn btn-danger" })
+<br />
+<br />
+<br />
+
+<table id="mitabla" class="table table-dark table-striped">
+
+    <thead>
+        <tr>
+            <th>Enrollemnt ID</th>
+            <th>Student ID</th>
+            <th>Course ID</th>
+            <th>LastName</th>
+            <th>FirstMidName</th>
+            <th>Curso</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var iteracion in Model)
+        {
+            <tr>
+                <td>@iteracion.ErollementID</td>
+                <td>@iteracion.StudentID</td>
+                <td>@iteracion.Course.CourseId</td>
+                <td>@iteracion.Student.LastName</td>
+                <td>@iteracion.Student.FirstMidName</td>
+                <td>@iteracion.Course.Title</td>
+                <td>@iteracion.Grade</td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
+
+@section scripts{
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var tabla = $('#mitabla').DataTable();
+        });</script>
+
+}

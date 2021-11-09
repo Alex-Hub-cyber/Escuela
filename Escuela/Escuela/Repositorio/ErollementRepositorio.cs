@@ -28,5 +28,12 @@ namespace Escuela.Repositorio
 
             return Union;
         }
+
+        public void Insertar(Erollement erollement)
+        {
+            db.Add(erollement);
+            db.SaveChanges();
+        }
+
     }
 }

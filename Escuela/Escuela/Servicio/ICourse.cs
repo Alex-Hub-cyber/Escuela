@@ -8,12 +8,36 @@ namespace Escuela.Servicios
 {
     public interface ICourse
     {
+      
+       public  void Update(Course c);
+
+
+
+
         public void Insertar(Course c);
 
+
+
+
+
+
         void Delete(Course c);
+
+
+
+
+
+
      
         
         void Buscar(Course c);
+
+
+
+
+
+
+
 
 
         //metodo definido

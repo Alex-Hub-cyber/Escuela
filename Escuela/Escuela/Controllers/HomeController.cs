@@ -19,15 +19,18 @@ namespace Escuela.Controllers
 
         private ICourse iCourse;
         private IErollement irollement;
-        public HomeController(ILogger<HomeController> logger, ICourse icourse, IErollement ierollement)
+        private IStudent student;
+        public HomeController(ILogger<HomeController> logger, ICourse icourse, IErollement ierollement, IStudent student)
         {
             this.iCourse = icourse;
+            this.student = student;
             this.irollement = ierollement;
             _logger = logger;
         }
-
+        
         public IActionResult Index()
         {
+            var Listado = irollement.UnionDeTablas();
             //for (int i = 0; i < 100; i++)
             //{
             //    Course course = new Course();
@@ -38,29 +41,50 @@ namespace Escuela.Controllers
             //var Listado = irollement.UnionDeTablas();
             //_ = Listado;
             //return View(Listado);
-            return View();
+            return View(Listado);
 
         }
         public IActionResult ComboBox()
         {
             var informationOfTheComboBox = iCourse.ListarCourses();
+            var informationtheComboboxforStudent = student.ListOfStudent();
            
-            List<SelectListItem> lista = new List<SelectListItem>();
-            foreach( var iterarinformacion in informationOfTheComboBox)
+             List<SelectListItem> listaCourse = new List<SelectListItem>();
+            List<SelectListItem> listaStudent = new List<SelectListItem>();
+            foreach ( var iterarinformacion in informationOfTheComboBox)
             {
-                lista.Add(new SelectListItem
+                listaCourse.Add(new SelectListItem
                 {
                     Text = iterarinformacion.Title,
                     Value = Convert.ToString
                          (iterarinformacion.CourseId)
                 });
 
-                ViewBag.estado = lista;
+                ViewBag.estado = listaCourse;
             }
-                
-                
-      
+            foreach (var iterarinformacion in informationtheComboboxforStudent)
+            {
+             listaStudent.Add(
+                    new SelectListItem
+                    {
+                        Text = iterarinformacion.FirstMidName,
+                        Value = Convert.ToString(iterarinformacion.StudentId)
+                    });
+
+
+                ViewBag.estadoStudents = listaStudent;
+
+            }
+
             return View();
+
+        }
+              
+
+        public IActionResult getinformationCombobox(Erollement e)
+        {
+          //  _ = e;
+            return View("Combobox");
         }
         public IActionResult NuevaVista()
         {
@@ -71,8 +95,8 @@ namespace Escuela.Controllers
         public IActionResult VistaDeUnionDeTablas()
         {
             var Listado = irollement.UnionDeTablas();
-            _ = Listado;
-            return View(Listado);
+           // _ = Listado;
+            return View();
         }
         public IActionResult GetAllForJoinJsonLinq()
         {

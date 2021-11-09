@@ -31,6 +31,7 @@ namespace Escuela
             services.AddTransient<ICourse, CourseRepositorio>();
             services.AddTransient<IErollement, ErollementRepositorio>();
             services.AddTransient<IStudent, StudentRepositorio>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,7 +58,7 @@ namespace Escuela
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Enrollments}/{action=UnionTabla}/{id?}");
             });
         }
     }

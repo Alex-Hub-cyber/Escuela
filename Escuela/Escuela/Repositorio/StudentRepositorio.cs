@@ -8,22 +8,36 @@ using System.Threading.Tasks;
 
 namespace Escuela.Repositorio
 {
-    public class StudentRepositorio:IStudent
+    public class StudentRepositorio : IStudent
     {
+
         private ApplicationDbContext db;
-
-
         public StudentRepositorio(ApplicationDbContext db)
         {
             this.db = db;
-
         }
 
-        public List<Student> Estudiantes()
+        public void Insert(Student student)
         {
+            db.Add(student);
+            db.SaveChanges();
+            
+        }
+
+        public List<Student> ListOfStudent()
+        {  
             return db.students.ToList();
         }
 
-      }
+        public void Update(Student student)
+        {
+            db.Update(student);
+            db.SaveChanges();
+            
+
+
+        }
+      
+      
     }
-    
+}

@@ -1,0 +1,37 @@
+﻿@model Escuela.Dominio.Erollement
+@{
+    ViewData["Title"] = "Combobox";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="border-top-color:darkviolet">Combobox</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comboox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+    @using (Html.BeginForm("GuardarLosDatos", "Enrollments", FormMethod.Get))
+    {
+
+        @Html.DropDownListFor(b => b.CourseID, new SelectList(ViewBag.ListadoEstudiante, "Value", "Text"), "Select a course", new { @class = "form-control" })
+        <br />
+        @Html.DropDownListFor(b => b.StudentID, new SelectList(ViewBag.Estado, "Value", "Text"), "Select a students", new { @class = "form-control" })
+        <br />
+
+        <label for="Grade">Grado</label>
+        <br />
+        <input type="number" name="Grade" />
+        <br />
+
+        <input type="submit" />
+
+
+    }
+</body>
+</html>

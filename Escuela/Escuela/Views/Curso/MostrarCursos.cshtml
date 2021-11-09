@@ -1,0 +1,46 @@
+﻿@model List<Escuela.Dominio.Course>
+@{
+    ViewData["Title"] = "MostrarCursos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="color:lightgreen">MostrarCursos</h1>
+
+<br />
+@Html.ActionLink(" GuardarCourse", "InsertarCourse", new { CourseId = 0 }, new { @class = "btn btn-primary" })
+
+<table class="table table-striped">
+    <thead>
+    <th>
+        CourseId
+    </th>
+    <th>
+        Title
+    </th>
+    <th>
+        Credits
+    </th>
+    </thead>
+
+    <tbody>
+
+        @foreach (var iteracion in Model)
+        {
+            <tr>
+                <td>@iteracion.CourseId</td>
+                <td>@iteracion.Title</td>
+                <td>@iteracion.Credits</td>
+                
+
+
+                <td>
+                    @Html.ActionLink("Update", "InsertarCourse", new { CourseId = iteracion.CourseId, Title = iteracion.Title, Credits = iteracion.Credits}, new { @class = "btn btn-danger" })
+
+
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
