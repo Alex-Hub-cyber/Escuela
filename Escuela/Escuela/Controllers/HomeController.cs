@@ -44,6 +44,12 @@ namespace Escuela.Controllers
             return View(Listado);
 
         }
+
+        public IActionResult Welcome()
+        {
+
+            return View();
+        }
         public IActionResult ComboBox()
         {
             var informationOfTheComboBox = iCourse.ListarCourses();

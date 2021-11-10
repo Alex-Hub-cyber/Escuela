@@ -17,12 +17,12 @@
 
     <thead>
         <tr>
-            <th>Enrollemnt ID</th>
+            @*<th>Enrollemnt ID</th>
             <th>Student ID</th>
-            <th>Course ID</th>
+            <th>Course ID</th>*@
             <th>LastName</th>
             <th>FirstMidName</th>
-            <th>Curso</th>
+            <th>Course</th>
             <th>Grade</th>
         </tr>
     </thead>
@@ -32,9 +32,9 @@
         @foreach (var iteracion in Model)
         {
             <tr>
-                <td>@iteracion.ErollementID</td>
+                @*<td>@iteracion.ErollementID</td>
                 <td>@iteracion.StudentID</td>
-                <td>@iteracion.Course.CourseId</td>
+                <td>@iteracion.Course.CourseId</td>*@
                 <td>@iteracion.Student.LastName</td>
                 <td>@iteracion.Student.FirstMidName</td>
                 <td>@iteracion.Course.Title</td>

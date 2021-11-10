@@ -7,19 +7,19 @@
 <h1 style="color:lightseagreen">InsertarCourse</h1>
 @using (Html.BeginForm("GuardarCourse", "Curso", FormMethod.Post))
 {
-    <label for="CourseId">CourseId</label>
+    <label for="CourseId"></label>
     <br />
     <input type="hidden" name="CourseId" value="@ViewBag.CourseId" />
     <br />
 
     <label for="Title">Title</label>
     <br />
-    <input type="text" name="Title" value="@ViewBag.Title"required />
+    <input type="text" name="Title" value="@ViewBag.Title" />
     <br />
 
     <label for="Credits">Credits</label>
     <br />
-    <input type="text" name="Credits" value="@ViewBag.Credits" required/>
+    <input type="text" name="Credits" value="@ViewBag.Credits" />
     <br />
 
 

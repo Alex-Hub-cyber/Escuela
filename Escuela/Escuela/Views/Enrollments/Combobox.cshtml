@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="border-top-color:darkviolet">Combobox</h1>
+<h1 style="color:brown">Combobox</h1>
 
 <!DOCTYPE html>
 <html>
@@ -24,12 +24,12 @@
         @Html.DropDownListFor(b => b.StudentID, new SelectList(ViewBag.Estado, "Value", "Text"), "Select a students", new { @class = "form-control" })
         <br />
 
-        <label for="Grade">Grado</label>
+        <label for="Grade">Select your Grade[ A, B, C, D]</label>
         <br />
         <input type="text" name="Grade" />
         <br />
 
-        <input  style="color:black" type="submit" />
+        <input  style="color:blue" type="submit" />
 
 
     }

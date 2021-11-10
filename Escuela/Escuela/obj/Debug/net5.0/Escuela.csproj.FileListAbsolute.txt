@@ -438,3 +438,4 @@ C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\
 C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\Escuela.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Enrollments\UnionTabla.cshtml.g.cs
 C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Enrollments\Combobox.cshtml.g.cs
+C:\Users\user\Desktop\Documents\GitHub\Escuela\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\Welcome.cshtml.g.cs
