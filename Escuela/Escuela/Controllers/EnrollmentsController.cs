@@ -59,7 +59,7 @@ namespace Escuela.Controllers
                 ListaEstudiante.Add(
                     new SelectListItem
                     {
-                        Text = IteracionInformacion.FirstMidName + " " + IteracionInformacion.LastName,
+                        Text = IteracionInformacion.FirstMidName + IteracionInformacion.LastName,
                         Value = Convert.ToString(IteracionInformacion.StudentId)
 
                     });

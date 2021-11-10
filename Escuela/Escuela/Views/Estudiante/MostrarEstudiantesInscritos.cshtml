@@ -34,8 +34,8 @@
 
 
                 <td>
-                    @Html.ActionLink("Update", "Insertar", new {  LastName = iteracion.LastName, FirstMidName = iteracion.FirstMidName, ErollementsDate = iteracion.ErollementsDate }, new { @class = "btn btn-danger" })
-                    @Html.ActionLink("Delete", "MostrarEstudiantesInscritos", new { StudentId = iteracion.StudentId }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Update", "Insertar", new { StudentId=iteracion.StudentId,  LastName = iteracion.LastName, FirstMidName = iteracion.FirstMidName, ErollementsDate = iteracion.ErollementsDate }, new { @class = "btn btn-danger" })
+                 
 
                 </td>
             </tr>

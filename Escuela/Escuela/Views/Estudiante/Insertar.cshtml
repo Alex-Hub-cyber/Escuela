@@ -4,13 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="border-top-color:darkcyan">Insertar</h1>
+<h1 style="border-top-color:darkcyan">Actualizar</h1>
 @using (Html.BeginForm("GuardarDatos", "Estudiante", FormMethod.Post))
 { 
-    <label for="StudentId ">2   </label>
-    <br />
-    <input  type="hidden" name="StudenId" value="@ViewBag.StudenId"/>
-    <br />
+<label for="StudentId">StudentId</label>
+<br />
+<input type="text" name="StudentId" value="@ViewBag.StudentId" />
 
     <label for="LastName">LastName</label>
     <br />
